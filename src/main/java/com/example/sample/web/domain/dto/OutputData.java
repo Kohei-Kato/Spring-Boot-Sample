@@ -1,4 +1,4 @@
-package com.example.sample.web.domain;
+package com.example.sample.web.domain.dto;
 
 import java.time.OffsetDateTime;
 

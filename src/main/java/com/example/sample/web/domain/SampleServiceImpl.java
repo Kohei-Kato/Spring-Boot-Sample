@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.sample.base.exception.SampleBusinessException;
-import com.example.sample.parts.CommonSytemParts;
+import com.example.sample.base.parts.CommonSytemParts;
+import com.example.sample.web.domain.dto.InputData;
+import com.example.sample.web.domain.dto.OutputData;
 
 @Service
 public class SampleServiceImpl implements SampleService{

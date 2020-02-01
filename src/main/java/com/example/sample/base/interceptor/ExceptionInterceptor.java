@@ -1,4 +1,4 @@
-package com.example.sample.base.handler;
+package com.example.sample.base.interceptor;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-public class ExceptionHandler {
+public class ExceptionInterceptor {
 	
 	/**
 	 * @RestControllerが付与されたクラスのメソッドからExceptionがthrowされた時の処理.

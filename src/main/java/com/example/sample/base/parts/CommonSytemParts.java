@@ -1,4 +1,4 @@
-package com.example.sample.parts;
+package com.example.sample.base.parts;
 
 public interface CommonSytemParts extends DateFactory{
 
