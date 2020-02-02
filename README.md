@@ -1,6 +1,6 @@
 # Spring-Boot-Sample
 
-TERASOLUNAガイドラインのアプリケーションのレイヤに基づいてSpring-Bootのサンプル。
+TERASOLUNAガイドラインのアプリケーションのレイヤに基づいたSpring-Bootのサンプル。
 
 ＜TERASOLUNA Server Framework for Java (5.x) Development Guideline　2.4. アプリケーションのレイヤ化＞
 http://terasolunaorg.github.io/guideline/5.5.1.RELEASE/ja/Overview/ApplicationLayering.html#applicationlayering
