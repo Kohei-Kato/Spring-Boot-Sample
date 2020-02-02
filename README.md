@@ -5,7 +5,8 @@ TERASOLUNAガイドラインのアプリケーションのレイヤに基づい�
 ＜TERASOLUNA Server Framework for Java (5.x) Development Guideline　2.4. アプリケーションのレイヤ化＞
 http://terasolunaorg.github.io/guideline/5.5.1.RELEASE/ja/Overview/ApplicationLayering.html#applicationlayering
 
-アプリケーションのほかに以下のサンプルも一般的なシステム開発で必要となる以下のサンプルも作成。
+アプリケーションのほかに以下のサンプルも一般的なシステム開発で必要となる以下のサンプルも作成。  
+（その他、必要なものがあれば追加する）
 
 | 機能     | 説明                                         | 実装クラス                            |
 |--------|--------------------------------------------|----------------------------------|
@@ -17,6 +18,7 @@ http://terasolunaorg.github.io/guideline/5.5.1.RELEASE/ja/Overview/ApplicationLa
 また、各レイヤの単体テストのひな形も作成。（作成中）
 
 
-各クラスの詳細は以下フォルダに格納しているJavacdocに各パッケージの説明を記載。(構成や部品は随時検討し、追加、変更中）
+各クラスの詳細は以下フォルダに格納しているJavacdocに各パッケージの説明を記載。  
+(構成や部品は随時検討し、追加、変更中）
 
 https://github.com/Kohei-Kato/Spring-Boot-Sample/tree/master/doc
