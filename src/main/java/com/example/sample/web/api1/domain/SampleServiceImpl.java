@@ -9,8 +9,8 @@ import com.example.sample.sysbase.exception.SampleBusinessException;
 import com.example.sample.sysbase.parts.CommonSytemParts;
 import com.example.sample.web.api1.Infrastructure.SampleRepository;
 import com.example.sample.web.api1.Infrastructure.entity.SampleEntity;
-import com.example.sample.web.api1.domain.dto.InputData;
-import com.example.sample.web.api1.domain.dto.OutputData;
+import com.example.sample.web.api1.domain.dto.InputDto;
+import com.example.sample.web.api1.domain.dto.OutputDto;
 
 @Service
 public class SampleServiceImpl implements SampleService{
@@ -25,7 +25,7 @@ public class SampleServiceImpl implements SampleService{
 	 * 業務処理
 	 */
 	@Override
-	public OutputData execute(InputData input) {
+	public OutputDto execute(InputDto input) {
 		
 
 		
@@ -40,9 +40,12 @@ public class SampleServiceImpl implements SampleService{
 		sampleRepository.updateSample(sampleEntity);
 		
 		//復帰値の作成
-		OutputData output = new OutputData();
+		OutputDto output = new OutputDto();
 		output.setKey1("test33");
 		output.setTime(time.toString());
+		
+		output.setResultCode("000");
+		output.setMessage("正常に終了しました。");
 		
 		return output;
 	}

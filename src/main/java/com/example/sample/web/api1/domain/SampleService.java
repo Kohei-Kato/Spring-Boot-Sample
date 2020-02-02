@@ -1,8 +1,8 @@
 package com.example.sample.web.api1.domain;
 
-import com.example.sample.web.api1.domain.dto.InputData;
-import com.example.sample.web.api1.domain.dto.OutputData;
+import com.example.sample.web.api1.domain.dto.InputDto;
+import com.example.sample.web.api1.domain.dto.OutputDto;
 
 public interface SampleService {
-	public OutputData execute(InputData input);
+	public OutputDto execute(InputDto input);
 }

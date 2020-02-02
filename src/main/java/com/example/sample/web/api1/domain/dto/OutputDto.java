@@ -1,11 +1,12 @@
 package com.example.sample.web.api1.domain.dto;
 
-import java.time.OffsetDateTime;
+
+import com.example.sample.web.apbase.domain.dto.BaseOutputDto;
 
 import lombok.Data;
 
 @Data
-public class OutputData {
+public class OutputDto extends BaseOutputDto{
 
 	private String key1;
 	
