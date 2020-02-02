@@ -4,8 +4,10 @@ com.example.sample.sysbase.config
 com.example.sample.sysbase.exception
 com.example.sample.sysbase.interceptor
 com.example.sample.sysbase.parts
+com.example.sample.web.api1
+com.example.sample.web.api1.application
+com.example.sample.web.api1.domain
+com.example.sample.web.api1.domain.dto
+com.example.sample.web.api1.Infrastructure
+com.example.sample.web.api1.Infrastructure.entity
 com.example.sample.web.application
-com.example.sample.web.domain
-com.example.sample.web.domain.dto
-com.example.sample.web.Infrastructure
-com.example.sample.web.Infrastructure.entity

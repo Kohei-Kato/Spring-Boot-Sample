@@ -14,6 +14,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import com.example.sample.web.api1.application.SampleControler;
+
 @SpringBootTest
 class SampleControllerTest {
 	
