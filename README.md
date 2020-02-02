@@ -10,3 +10,7 @@ http://terasolunaorg.github.io/guideline/5.5.1.RELEASE/ja/Overview/ApplicationLa
 ・「例外制御」「ログ制御」などの制御部品
 
 ・各レイヤの単体テストのひな形
+
+以下フォルダに格納しているJavacdocに各パッケージの説明を記載。
+
+https://github.com/Kohei-Kato/Spring-Boot-Sample/tree/master/doc
