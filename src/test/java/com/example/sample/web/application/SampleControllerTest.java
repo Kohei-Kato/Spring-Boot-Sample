@@ -1,6 +1,5 @@
 package com.example.sample.web.application;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -41,7 +40,7 @@ class SampleControllerTest {
 	}
 
 	/**
-	 * ƒRƒ“ƒgƒ[ƒ‰[‚ğÀs‚µAŒ‹‰Ê‚ğŠm”F‚·‚é.
+	 * Controllerã®å‘¼ã³å‡ºã—ãƒ†ã‚¹ãƒˆ.
 	 * @throws Exception
 	 */
 	@Test

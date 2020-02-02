@@ -1,0 +1,11 @@
+com.example.sample
+com.example.sample.sysbase
+com.example.sample.sysbase.config
+com.example.sample.sysbase.exception
+com.example.sample.sysbase.interceptor
+com.example.sample.sysbase.parts
+com.example.sample.web.application
+com.example.sample.web.domain
+com.example.sample.web.domain.dto
+com.example.sample.web.Infrastructure
+com.example.sample.web.Infrastructure.entity
