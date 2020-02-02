@@ -17,6 +17,6 @@ http://terasolunaorg.github.io/guideline/5.5.1.RELEASE/ja/Overview/ApplicationLa
 また、各レイヤの単体テストのひな形も作成。（作成中）
 
 
-各クラスの詳細は以下フォルダに格納しているJavacdocに各パッケージの説明を記載。
+各クラスの詳細は以下フォルダに格納しているJavacdocに各パッケージの説明を記載。(構成や部品は随時検討し、追加、変更中）
 
 https://github.com/Kohei-Kato/Spring-Boot-Sample/tree/master/doc
