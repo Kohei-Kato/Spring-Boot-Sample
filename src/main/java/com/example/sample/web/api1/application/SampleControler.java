@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.sample.sysbase.enviroment.ApplicationEnviroment;
 import com.example.sample.web.api1.application.form.InputForm;
 import com.example.sample.web.api1.application.form.OutputForm;
 import com.example.sample.web.api1.domain.SampleService;
@@ -20,12 +21,15 @@ public class SampleControler {
 
 	@Autowired
 	private Mapper mapper;
+	
+	@Autowired
+	private ApplicationEnviroment applicationEnviroment;
 
 	@GetMapping("/sample")
 	public OutputForm executeGet(InputForm inputForm) {
 
 		InputDto inputData = new InputDto();
-
+		
 		OutputDto outputData = sampleService.execute(inputData);
 
 		// サービス実行結果をコントローラーの復帰値に設定
@@ -43,6 +47,10 @@ public class SampleControler {
 			outputForm.setMessage("SampleAPIが異常終了しました。");
 			
 		}
+		
+		// 環境依存値より、アクティブな環境名を取得
+		String value = applicationEnviroment.getValue("active");
+		outputForm.setEnviroment(value);
 
 		return outputForm;
 	}

@@ -1,6 +1,7 @@
 com.example.sample
 com.example.sample.sysbase
 com.example.sample.sysbase.config
+com.example.sample.sysbase.enviroment
 com.example.sample.sysbase.exception
 com.example.sample.sysbase.interceptor
 com.example.sample.sysbase.parts

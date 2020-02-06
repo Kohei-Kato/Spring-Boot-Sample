@@ -11,4 +11,5 @@ public class OutputForm extends BaseOutputForm {
 
 	private String time;
 
+	private String enviroment;
 }

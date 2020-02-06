@@ -1,0 +1,7 @@
+#本番環境用の環境依存値
+app:
+  env: #アプリケーションの環境依存値はこの配下に記載
+    active: production
+    bucket:
+      name: xxx
+    file: "test.txt"
