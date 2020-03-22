@@ -16,6 +16,11 @@ public class BaseOutputForm {
 	private String message;
 	
 	/**
+	 * APIの処理結果.
+	 */
+	private boolean result;
+	
+	/**
 	 * APIの処理結果コード
 	 */
 	private String resultCode;

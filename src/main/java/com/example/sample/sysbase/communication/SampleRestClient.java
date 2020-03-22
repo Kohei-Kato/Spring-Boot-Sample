@@ -30,8 +30,8 @@ public class SampleRestClient {
 	private URI uri;
 
 	public SampleRestClient(@Autowired RestTemplateBuilder builder, @Value("sysbase.restclient.uri") String uri,
-			@Value("sysbase.restclient.readTimeout:3") Integer readTimeout,
-			@Value("sysbase.restclient.connectTimeout:3") Integer connectTimeout) {
+			@Value("${sysbase.restclient.readTimeout:3}") Integer readTimeout,
+			@Value("${sysbase.restclient.connectTimeout:3}") Integer connectTimeout) {
 
 		try {
 			this.uri = new URI(uri);

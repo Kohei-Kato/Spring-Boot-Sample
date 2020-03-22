@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.sample.sysbase.enviroment.ApplicationEnviroment;
+import com.example.sample.sysbase.exception.SampleBusinessException;
+import com.example.sample.web.apbase.application.form.BaseOutputForm;
 import com.example.sample.web.api1.application.form.InputForm;
 import com.example.sample.web.api1.application.form.OutputForm;
 import com.example.sample.web.api1.domain.SampleService;
@@ -23,7 +25,7 @@ public class SampleControler {
 	private Mapper mapper;
 	
 	@Autowired
-	private ApplicationEnviroment applicationEnviroment;
+	private ApplicationEnviroment enviroment;
 
 	@GetMapping("/sample")
 	public OutputForm executeGet(InputForm inputForm) {
@@ -38,21 +40,29 @@ public class SampleControler {
 		if ("000".equals(outputData.getResultCode())) {
 			// Serviceが正常終了した場合
 			mapper.map(outputData, outputForm);
+			outputForm.setResult(true);
 			outputForm.setResultCode("0");
 			outputForm.setMessage("SampleAPIが正常終了しました。");
 			
 		} else {
 			// Serviceが異常終了した場合
+			outputForm.setResult(false);
 			outputForm.setResultCode("1");
 			outputForm.setMessage("SampleAPIが異常終了しました。");
 			
 		}
 		
 		// 環境依存値より、アクティブな環境名を取得
-		String value = applicationEnviroment.getValue("active");
+		String value = enviroment.getValue("test");
 		outputForm.setEnviroment(value);
 
+		BaseOutputForm base = (BaseOutputForm)outputForm;
+		
+//		throw new SampleBusinessException();
+		
 		return outputForm;
+		
+//		return new Object();
 	}
 
 }
