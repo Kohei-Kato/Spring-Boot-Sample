@@ -37,3 +37,8 @@ ApplicationEnviroment
 (構成や部品は随時検討し、追加、変更中）
 
 https://github.com/Kohei-Kato/Spring-Boot-Sample/tree/master/doc
+
+
+# 課題
+## DEBUGログの内容の絞り込み
+ログレベルをdebugにすると、デフォルトで大量の情報が出力されてしまう。必要のないものは出力しないようにする。
