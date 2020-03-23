@@ -29,6 +29,16 @@ Controllerが例外をthrowした場合にAOPでキャッチし、例外処理�
 application.ymlに設定した環境依存値の取得。  
 ApplicationEnviroment 
 
+## メッセージ管理 
+application.ymlの`spring.message`配下で設定したpropertiesファイルでメッセージを管理。  
+アプリケーションからはMessageResourceを利用してメッセージ取得。  
+
+### 課題
+
+- `messageSource.getMessage("app.message.sample.normal.001", null, Locale.JAPAN)`とするのは非常に冗長。
+Localeの指定や埋め込み文字なしの場合のnull指定は省略したい。
+- メッセージは大量になるため検索や置換のためExcelファイルで管理が望ましいと考える。よってExcelからプロパティファイルを生成できるツールが必要。
+
 
 また、各レイヤの単体テストのひな形も作成。（作成中）
 
