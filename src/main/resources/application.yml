@@ -1,7 +1,15 @@
-#本番環境用の環境依存値
+spring:
+ messages: #メッセージ管理定義.複数ファイルを使用する場合はbasenameに,区切りでファイル名を追加.
+  basename: messages
+  cache-duration: -1
+  encoding: UTF-8 
+
+#共通の環境依存値
 app:
   env: #アプリケーションの環境依存値はこの配下に記載
-    active: production
+    active: local
     bucket:
       name: xxx
     file: "test.txt"
+    test: localtest
+    
