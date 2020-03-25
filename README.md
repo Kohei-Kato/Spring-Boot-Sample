@@ -22,8 +22,26 @@ Controllerが例外をthrowした場合にAOPでキャッチし、例外処理�
 
 
 ## フィルタ制御 
-リクエストURLよって個別の制御を差し込む。（未）
+リクエストURLよって個別の制御を差し込む。
 
+### ＜実装クラス＞
+フィルタ本体
+- com.example.sample.sysbase.filter.SampleFilter
+- com.example.sample.sysbase.filter.SampleFilter2
+
+フィルタの登録
+- com.example.sample.sysbase.config.FilterConfig
+
+### ＜処理概要＞
+フィルタの登録時にフィルタが反応するURLパターンを指定。  
+SampleFilterは全URL（/*）、SampleFilter2はSampleController（/sample/*）へのリクエストの場合に反応するようにした。
+
+### ＜課題＞
+フィルタが反応するURLを外部化し、自由に変更できるようにする。
+
+### ＜参考URL＞
+- Spring BootでFilterを利用してみた  
+https://www.purin-it.com/spring-boot-filter1
 
 ## 環境依存値取得 
 application.ymlに設定した環境依存値の取得。  
