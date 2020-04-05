@@ -1,0 +1,8 @@
+{
+  "message": "SampleAPIが正常終了しました。",
+  "result": true,
+  "resultCode": "0",
+  "key1": "test33",
+  "time": "1111-01-01T01:01:01+09:00",
+  "enviroment": "localtest"
+}
