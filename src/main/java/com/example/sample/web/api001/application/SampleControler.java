@@ -1,19 +1,17 @@
-package com.example.sample.web.api1.application;
+package com.example.sample.web.api001.application;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cglib.core.Local;
 import org.springframework.context.MessageSource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.sample.sysbase.enviroment.ApplicationEnviroment;
-import com.example.sample.sysbase.exception.SampleBusinessException;
 import com.example.sample.web.apbase.application.form.BaseOutputForm;
-import com.example.sample.web.api1.application.form.InputForm;
-import com.example.sample.web.api1.application.form.OutputForm;
-import com.example.sample.web.api1.domain.SampleService;
-import com.example.sample.web.api1.domain.dto.InputDto;
-import com.example.sample.web.api1.domain.dto.OutputDto;
+import com.example.sample.web.api001.application.form.InputForm;
+import com.example.sample.web.api001.application.form.OutputForm;
+import com.example.sample.web.api001.domain.SampleService;
+import com.example.sample.web.api001.domain.dto.InputDto;
+import com.example.sample.web.api001.domain.dto.OutputDto;
 
 import java.util.Locale;
 

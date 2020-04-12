@@ -1,16 +1,15 @@
-package com.example.sample.web.api1.domain;
+package com.example.sample.web.api001.domain;
 
 import java.time.OffsetDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.sample.sysbase.exception.SampleBusinessException;
 import com.example.sample.sysbase.parts.CommonSytemParts;
-import com.example.sample.web.api1.Infrastructure.SampleRepository;
-import com.example.sample.web.api1.Infrastructure.entity.SampleEntity;
-import com.example.sample.web.api1.domain.dto.InputDto;
-import com.example.sample.web.api1.domain.dto.OutputDto;
+import com.example.sample.web.api001.Infrastructure.SampleRepository;
+import com.example.sample.web.api001.Infrastructure.entity.SampleEntity;
+import com.example.sample.web.api001.domain.dto.InputDto;
+import com.example.sample.web.api001.domain.dto.OutputDto;
 
 @Service
 public class SampleServiceImpl implements SampleService{
@@ -26,9 +25,7 @@ public class SampleServiceImpl implements SampleService{
 	 */
 	@Override
 	public OutputDto execute(InputDto input) {
-		
 
-		
 		//DBの参照
 		SampleEntity sampleEntity = sampleRepository.selectSample(1);
 

@@ -4,4 +4,4 @@
  * ＜参考リンク＞<br>
  * http://terasolunaorg.github.io/guideline/5.5.1.RELEASE/ja/Overview/ApplicationLayering.html#layerofinfrastructure
  */
-package com.example.sample.web.api1.Infrastructure;
+package com.example.sample.web.api001.Infrastructure;

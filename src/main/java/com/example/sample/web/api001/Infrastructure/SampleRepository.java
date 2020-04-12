@@ -1,6 +1,6 @@
-package com.example.sample.web.api1.Infrastructure;
+package com.example.sample.web.api001.Infrastructure;
 
-import com.example.sample.web.api1.Infrastructure.entity.SampleEntity;
+import com.example.sample.web.api001.Infrastructure.entity.SampleEntity;
 
 public interface SampleRepository {
 	

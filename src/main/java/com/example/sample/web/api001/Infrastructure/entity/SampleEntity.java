@@ -1,4 +1,4 @@
-package com.example.sample.web.api1.Infrastructure.entity;
+package com.example.sample.web.api001.Infrastructure.entity;
 
 import java.time.OffsetDateTime;
 
