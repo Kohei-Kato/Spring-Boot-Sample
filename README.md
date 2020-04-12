@@ -66,7 +66,34 @@ Localeの指定や埋め込み文字なしの場合のnull指定は省略した�
 
 https://github.com/Kohei-Kato/Spring-Boot-Sample/tree/master/doc
 
+## 単体テスト
 
-# 課題
+### レイヤごとのテストの作成テンプレート
+
+#### ＜課題＞
+
+
+### テスト資材の配置構成
+
+```
+test
+├─java.com.example.web
+│  └─api001                          　①API単位でフォルダを作成
+│        SampleControllerTest.java
+│
+└─resources
+    └─com.example.sample.web
+         └─api001                      ①API単位でフォルダを作成
+             └─GetNormal               ①APIのメソッド＋Nromal（正常系）、Error(異常系)、Validate(入力チェック)単位でフォルダを作成
+                  └─test01             ③テストメソッド名
+                       └─output.json
+                             
+
+```
+
+#### ＜課題＞
+- テストクラスが複数になった場合、上記のルールだと資材フォルダが作成できない。
+
+# 全体課題
 ## DEBUGログの内容の絞り込み
 ログレベルをdebugにすると、デフォルトで大量の情報が出力されてしまう。必要のないものは出力しないようにする。
