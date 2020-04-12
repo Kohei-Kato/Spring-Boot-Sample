@@ -1,56 +1,89 @@
-package com.example.sample.web.application;
+package com.example.sample.web.api001;
 
+import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import base.TestBase;
+import com.example.sample.sysbase.parts.CommonSytemParts;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import com.example.sample.web.api1.application.SampleControler;
+import com.example.sample.web.api001.application.SampleControler;
+import util.TestUtil;
+
+import java.io.File;
 
 @SpringBootTest
-class SampleControllerTest {
-	
-	@Autowired
-	private SampleControler sampleController;
+class SampleControllerTest extends TestBase {
 
-	MockMvc mockMvc;
-	
-	@BeforeAll
-	static void setUpBeforeClass() throws Exception {
-	}
+  @Autowired private SampleControler sampleController;
 
-	@AfterAll
-	static void tearDownAfterClass() throws Exception {
-	}
+  MockMvc mockMvc;
 
-	@BeforeEach
-	void setUp() throws Exception {
-		mockMvc = MockMvcBuilders.standaloneSetup(sampleController).build();
-	}
+  @MockBean CommonSytemParts commonSytemParts;
 
-	@AfterEach
-	void tearDown() throws Exception {
-	}
 
-	/**
-	 * Controllerの呼び出しテスト.
-	 * @throws Exception
-	 */
-	@Test
-	void test() throws Exception {
-		
-		ResultActions result = mockMvc.perform(get("/sample"));
-		
-		result.andExpect(status().isOk());
-	}
 
+  /** テスト資材の格納パス */
+  private final String testResourcePath = resourcePath + "com/example/sample/web/api001/";
+
+  @BeforeAll
+  static void setUpBeforeClass() throws Exception {}
+
+  @AfterAll
+  static void tearDownAfterClass() throws Exception {}
+
+  @BeforeEach
+  void setUp() throws Exception {
+    mockMvc = MockMvcBuilders.standaloneSetup(sampleController).build();
+  }
+
+  @AfterEach
+  void tearDown() throws Exception {}
+
+  /**
+   * GETメソッドの正常系テスト.
+   */
+  @Nested
+  class GetNormal {
+
+    /** 本カテゴリのテスト資材の格納パス */
+    private final String resourceGetNormalPath = testResourcePath + "get/Normal/";
+
+    @DisplayName("正常系テスト.")
+    @Test
+    void test01() throws Exception {
+
+      String testName = "test01";
+
+      //--- 入力値
+      //GETのためなし
+
+      //--- 期待値
+      String expectJson = readJsonFile(resourceGetNormalPath + testName +"/output.json");
+
+      //--- モック設定
+      // 現在時刻として「1111-1-1T1:1:1+09:00」を取得
+      when(commonSytemParts.getCurrentTime()).thenReturn(TestUtil.get1111y1m1d1h1m1sTime());
+
+      //--- API実行
+      ResultActions result =
+          mockMvc.perform(get("/sample").accept("application/json;charset=utf-8"));
+
+      //---レスポンスのチェック
+      //ステータスコードチェック
+      result.andExpect(status().isOk());
+      //レスポンスJSONの確認
+      result.andExpect(content().string(expectJson));
+    }
+  }
 }
