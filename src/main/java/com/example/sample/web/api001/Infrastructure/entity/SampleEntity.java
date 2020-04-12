@@ -3,13 +3,16 @@ package com.example.sample.web.api001.Infrastructure.entity;
 import java.time.OffsetDateTime;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * DBのテーブルに対応したEntity
  * @author kohe5
  *
  */
-@Data
+@Setter
+@Getter
 public class SampleEntity {
 
 	/**

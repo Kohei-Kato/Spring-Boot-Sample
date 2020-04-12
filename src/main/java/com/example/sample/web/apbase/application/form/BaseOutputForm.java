@@ -1,13 +1,16 @@
 package com.example.sample.web.apbase.application.form;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * APIの共通アウトプットデータ.
  * @author kohe5
  *
  */
-@Data
+@Setter
+@Getter
 public class BaseOutputForm {
 	
 	/**
