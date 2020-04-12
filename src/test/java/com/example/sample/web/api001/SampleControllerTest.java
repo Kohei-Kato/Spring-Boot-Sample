@@ -57,7 +57,7 @@ class SampleControllerTest extends TestBase {
   class GetNormal {
 
     /** 本カテゴリのテスト資材の格納パス */
-    private final String resourceGetNormalPath = testResourcePath + "get/Normal/";
+    private final String resourceGetNormalPath = testResourcePath + "GetNormal/";
 
     @DisplayName("正常系テスト.")
     @Test
